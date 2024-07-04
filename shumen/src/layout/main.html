@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <title>FrozenUI Demo</title>
+    <!-- 引入 FrozenUI -->
+    <link rel="stylesheet" href="css/frozen.css"/>
+    <style>
+        body > a {
+            display: none;
+        }
+
+        .demo-desc {
+            padding: 5px;
+            font-size: 16px;
+            color:#0E98CB;
+            font-weight: bold;
+            height: 20px;
+            line-height: 20px;
+            margin-top: 20px;
+        }
+        .fontSize1 {
+            font-size:16px;
+        }
+        .fontSize2 {
+            font-size:12px;
+            weight: bold;
+        }
+        .pb{
+            padding-bottom: -20px;
+        }
+    </style>
+</head>
+<body style="background-color: #fff">
+<div class="ui-form ui-border-t">
+    <form>
+        <div class="ui-tooltips ">
+            <div class="ui-tooltips-cnt ui-border-b demo-desc">
+                起号
+            </div>
+        </div>
+        <div class='ui-form-item ui-form-item-checkbox'>
+            <label class='ui-checkbox'>
+                <input type='checkbox' class='appCheck'  id='level'>
+            </label>
+            <p class="fontSize1">主线任务起号35级</p>
+        </div>
+        <div class="ui-tooltips">
+            <div class="ui-tooltips-cnt ui-border-b demo-desc">
+                日常活动
+            </div>
+        </div>
+
+
+
+
+        <div id="installedContainer1">
+            <div class='ui-form-item ui-form-item-checkbox'>
+                <label class='ui-checkbox'>
+                    <input type='checkbox' class='appCheck'  id='gj' value="true">
+                </label>
+                <p class="fontSize1">挂机</p>
+                <span class='gj_time' style='margin-left: 10px;font-size: 14px;color:#0E98CB;'>时长: --/--</span>
+                <span class='gj_set' style='margin-left: 10px;font-size: 14px;color:#0E98CB;'>设置</span>
+            </div>
+        </div>
+<!--        <div style='margin-left: 10px;color:#0E98CB;'>周常活动</div>-->
+        <div class="ui-tooltips">
+            <div class="ui-tooltips-cnt ui-border-b demo-desc">
+                周常活动
+            </div>
+        </div>
+        <div id="installedContainer2">
+
+        </div>
+
+        <div class="" style="padding: 5px">
+            <a class="ui-btn-lg ui-btn-primary" onclick="javascript:window.ec.start()">
+                启动脚本
+            </a>
+        </div>
+    </form>
+</div>
+
+
+<div class="ui-dialog ui-dialog-operate" id="myModal_zc">
+    <div class="ui-dialog-cnt">
+        <div class="ui-dialog-bd">
+            <h1>抓宠</h1>
+            <form>
+                <div class="ui-form-item fontSize2">
+                    <label>
+                        时长1
+                    </label>
+                    <input type="text"  id="zc_time1" maxlength="3"   placeholder="请输入时长1"/>
+                </div>
+                <div class="ui-form-item fontSize2">
+                    <label>
+                        时长2
+                    </label>
+                    <input type="text"  id="zc_time2" maxlength="2"  placeholder="请输入时长2"/>
+                </div>
+            </form>
+        </div>
+        <div class="ui-dialog-ft">
+            <button class="ui-btn-lg" id="zc_save">确定</button>
+        </div>
+        <i class="ui-dialog-close" data-role="button" id="zc_close"></i>
+    </div>
+</div>
+
+
+
+<div class="ui-dialog ui-dialog-operate" id="myModal_gj">
+    <div class="ui-dialog-cnt">
+        <div class="ui-dialog-bd">
+            <h1>挂机</h1>
+            <form>
+                <div class="ui-form-item fontSize2">
+                    <label>
+                        时长1
+                    </label>
+                    <input type="text"  id="gj_time1" maxlength="3"   placeholder="请输入时长1"/>
+                </div>
+                <div class="ui-form-item fontSize2">
+                    <label>
+                        时长2
+                    </label>
+                    <input type="text"  id="gj_time2" maxlength="2"  placeholder="请输入时长2"/>
+                </div>
+            </form>
+        </div>
+        <div class="ui-dialog-ft">
+            <button class="ui-btn-lg" id="gj_save">确定</button>
+        </div>
+        <i class="ui-dialog-close" data-role="button" id="gj_close"></i>
+    </div>
+</div>
+
+<script src="htmljs/jquery.min.js"></script>
+</body>
+
+<script>
+    //隐藏开始按钮
+    window.ec.hideStartBtn();
+
+    $(function () {
+        //使用jquery进行设置值
+        //取得参数并且进行设置
+        //一键升级55级
+        // var level = JSON.parse(window.ec.getConfig("level"))
+        // $("#level").attr("checked", level.check)
+        //
+        // $(".gj_set").on("click", function(){
+        //     var gj = JSON.parse(window.ec.getConfig("gj"));
+        //     $("#gj_time1").val(gj.time);
+        //     $("#gj_time2").val(gj.time2);
+        //     $("#myModal_gj").addClass("show")
+        //
+        //
+        // })
+        // $("#gj_close").on("click", function(){
+        //     $("#myModal_gj").removeClass("show")
+        // })
+    });
+
+
+
+
+</script>
+</html>
