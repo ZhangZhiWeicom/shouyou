@@ -15,23 +15,4 @@ let area = {
 let action  = "111";//提示正在进行的任务动作
 //一键起号到55级
 let level = {};
-//挂机
-let gj = {
 
-}
-
-//抓宠
-let zc = {
-
-}
-
-//精灵王试炼
-let jlw = {
-
-  }
-
-
-//百人道场
-let brdc =  {
-
-}

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="769931c7-ca56-4153-94da-a910bafcd97d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../colorimage/20240706143546.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shumen.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/extra.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/extra.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/mainTask.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/mainTask.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/mainTask1.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="shumen" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2irUMXOFvrDV5Qe3HYUdegRuu6B" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration name="main.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/js/main.js" working-dir="$PROJECT_DIR$/src/js">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.main.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="769931c7-ca56-4153-94da-a910bafcd97d" name="Default Changelist" comment="" />
+      <created>1720248141683</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720248141683</updated>
+      <workItem from="1720248144097" duration="51000" />
+      <workItem from="1720248211077" duration="137000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="988" y="373" key="#main.js" timestamp="1720248342256">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="988" y="373" key="#main.js/0.0.2560.1400@0.0.2560.1400" timestamp="1720248342256" />
+    <state x="1060" y="441" key="FileChooserDialogImpl" timestamp="1720248191220">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1060" y="441" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1720248191220" />
+    <state x="781" y="342" key="SettingsEditor" timestamp="1720248196042">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="781" y="342" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1720248196042" />
+    <state x="960" y="524" key="com.intellij.ide.util.TipDialog" timestamp="1720248212315">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="960" y="524" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1720248212315" />
+  </component>
+</project>

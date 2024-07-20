@@ -183,6 +183,14 @@ function mainTask(){
         }, function(idx){
             logd("去融合");
         })
+
+        func.findImageEx("免费领取.png", 402,454,626,544, 1, function(result){
+            clickPoint(result.x + random(-15, 15),result.y+ random(-5, 5))
+            sleep(1000);
+        }, function(idx){
+            logd("去融合");
+        })
+
         func.findImageEx("关闭弹窗1.png", 794,16,1266,240, 1, function(result){
             clickPoint(result.x  + random(-5, 5),result.y + random(-5, 5))
             sleep(800);

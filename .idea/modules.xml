@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/newStone/newStone.iml" filepath="$PROJECT_DIR$/newStone/newStone.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/shouyou.iml" filepath="$PROJECT_DIR$/.idea/shouyou.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shumen2/shumen2.iml" filepath="$PROJECT_DIR$/shumen2/shumen2.iml" />
     </modules>
   </component>
 </project>
