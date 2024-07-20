@@ -3,18 +3,34 @@
 let com = function(){}
 
 
+com.创建队伍 = function(){
 
-com.对话2 = function(times1, times2){
-    if(!times2) times2 = 30
-    func.findImageEx("3.png", 362,772,514,864, times2, function(){
-        滑块移动(1);
-        sleep(500 + random(-100, 100));
-    }, function(res){
-        //关闭弹窗
-//        logd("出现对话")
-        sleep(1000)
-    });
-    对话("3.png", 362,772,514,864, times1);
+    func.findImageEx("创建队伍.png", 1014,566,1266,702, 1, function(result){
+        logd("创建队伍");
+        clickPoint(result.x+218+ random( -20, 20),  result.y+68);
+        sleep(1000);
+        findRoad()
+    }, function(idx){
+        // logd("保护苦头陀");
+
+    })
+
 }
+
+com.进入活动 = function(){
+
+    func.findImageEx("进入活动.png", 1014,566,1266,702, 1, function(result){
+        logd("创建队伍");
+        clickPoint(result.x+218+ random( -20, 20),  result.y+68);
+        sleep(1000);
+        findRoad()
+    }, function(idx){
+        // logd("保护苦头陀");
+
+    })
+
+}
+
+
 
 

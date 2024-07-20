@@ -62,6 +62,7 @@ function main() {
 function mainTask(){
     do{
         func.findImageEx("主线任务.png", 45,170,88,221, 1, function(result){
+            logd("主线");
             clickPoint(result.x+100+ random( -50, 50),  result.y+20+ random(-5, 5));
             sleep(1000);
             findRoad()
