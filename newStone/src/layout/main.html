@@ -7,7 +7,7 @@
           content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
     <title>FrozenUI Demo</title>
     <!-- 引入 FrozenUI -->
-    <link rel="stylesheet" href="/css/frozen.css"/>
+    <link rel="stylesheet" href="css/frozen.css"/>
     <style>
         body > a {
             display: none;
@@ -15,141 +15,159 @@
 
         .demo-desc {
             padding: 5px;
-            font-size: 14px;
-            color: #7CAE23;
+            font-size: 16px;
+            color:#0E98CB;
+            font-weight: bold;
+            height: 20px;
+            line-height: 20px;
+            margin-top: 20px;
+        }
+        .fontSize1 {
+            font-size:16px;
+        }
+        .fontSize2 {
+            font-size:12px;
+            weight: bold;
+        }
+        .pb{
+            padding-bottom: -20px;
         }
     </style>
 </head>
 <body style="background-color: #fff">
-
-<div class="ui-tooltips">
-    <div class="ui-tooltips-cnt ui-border-b">
-        本网页使用QQ FrozenUI构建，地址: <a href="https://frozenui.github.io">FrozenUI</a>
-    </div>
-</div>
-
 <div class="ui-form ui-border-t">
     <form>
-
-        <div class="ui-form-item ui-border-b">
-            <label>
-                卡密
-            </label>
-            <input type="text" placeholder="请输入卡密" id="cardNo" name="cardNo"/>
+        <div class="ui-tooltips ">
+            <div class="ui-tooltips-cnt ui-border-b demo-desc">
+                起号
+            </div>
         </div>
-
-
-        <div class="ui-form-item ui-border-b">
-            <label>
-                姓名
+        <div class='ui-form-item ui-form-item-checkbox'>
+            <label class='ui-checkbox'>
+                <input type='checkbox' class='appCheck'  id='level'>
             </label>
-            <input type="text" placeholder="请输入姓名" id="name" name="name"/>
+            <p class="fontSize1">一键起号到55级</p>
         </div>
-
-        <div class="ui-form-item ui-border-b">
-            <label>
-                年龄
-            </label>
-            <input type="text" placeholder="请输入年龄" id="age" name="age"/>
-        </div>
-
         <div class="ui-tooltips">
             <div class="ui-tooltips-cnt ui-border-b demo-desc">
-                年级
+                日常活动
             </div>
         </div>
-        <div class="ui-form-item ui-form-item-radio ui-border-b">
-            <label class="ui-radio" for="radio">
-                <input type="radio" name="radio" id="one">
-            </label>
-            <p>一年级</p>
-        </div>
-        <div class="ui-form-item ui-form-item-radio ui-border-b">
 
-            <label class="ui-radio" for="radio">
-                <input type="radio" checked="" name="radio" id="two">
-            </label>
-            <p>二年级</p>
+        <div id="installedContainer1">
+            <div class='ui-form-item ui-form-item-checkbox'>
+                <label class='ui-checkbox'>
+                    <input type='checkbox' class='appCheck'  id='gj' value="true">
+                </label>
+                <p class="fontSize1">挂机</p>
+                <span class='gj_time' style='margin-left: 10px;font-size: 14px;color:#0E98CB;'>时长: --/--</span>
+                <span class='gj_set' style='margin-left: 10px;font-size: 14px;color:#0E98CB;'>设置</span>
+            </div>
+            <div class='ui-form-item ui-form-item-checkbox ui-border-b'>
+                <label class='ui-checkbox'>
+                    <input type='checkbox' class='appCheck'  id='zc'>
+                </label>
+                <p class="fontSize1">抓宠</p>
+                <span class='zc_time' style='margin-left: 10px;font-size: 14px;color:#0E98CB;'>时长: --/--</span>
+                <span class='zc_set' style='margin-left: 10px;font-size: 14px;color:#0E98CB;'>设置</span>
+            </div>
+            <div class='ui-form-item ui-form-item-checkbox ui-border-b'>
+                <label class='ui-checkbox'>
+                    <input type='checkbox' class='appCheck'  id='jlw'>
+                </label>
+                <p class="fontSize1">精灵王试炼</p>
+                <span class='jlw_team' style='margin-left: 10px;font-size: 14px;color:#0E98CB;'>组队</span>
+                <span class='jlw_floor' style='margin-left: 10px;font-size: 14px;color:#0E98CB;'>2层</span>
+<!--                <span class='time_"+appName+"' style='margin-left: 10px;font-size: 14px;color:#228B22;'>已完成</span>-->
+                <span class='jlw_status' style='margin-left: 10px;font-size: 14px;color:red;'>未完成</span>
+                <span class='jlw_set' style='margin-left: 10px;font-size: 14px;color:#0E98CB;'>设置</span>
+            </div>
+            <div class='ui-form-item ui-form-item-checkbox ui-border-b'>
+                <label class='ui-checkbox'>
+                    <input type='checkbox' class='appCheck'  id='brdc'>
+                </label>
+                <p class="fontSize1">百人道场</p>
+                <span class='brdc_team' style='margin-left: 10px;font-size: 14px;color:#0E98CB;'>组队</span>
+                <span class='brdc_floor' style='margin-left: 10px;font-size: 14px;color:#0E98CB;'>2层</span>
+                <!--                <span class='time_"+appName+"' style='margin-left: 10px;font-size: 14px;color:#228B22;'>已完成</span>-->
+                <span class='brdc_status' style='margin-left: 10px;font-size: 14px;color:red;'>未完成</span>
+                <span class='brdc_set' style='margin-left: 10px;font-size: 14px;color:#0E98CB;'>设置</span>
+            </div>
         </div>
-        <div class="ui-form-item ui-form-item-radio ui-border-b">
-
-            <label class="ui-radio" for="radio">
-                <input type="radio" checked="" name="radio" id="three">
-            </label>
-            <p>三年级</p>
-        </div>
-
+<!--        <div style='margin-left: 10px;color:#0E98CB;'>周常活动</div>-->
         <div class="ui-tooltips">
             <div class="ui-tooltips-cnt ui-border-b demo-desc">
-                爱好
+                周常活动
             </div>
         </div>
-        <div class="ui-form-item ui-form-item-checkbox ui-border-b">
-            <label class="ui-checkbox">
-                <input type="checkbox" name="aihao" id="music">
-            </label>
-            <p>听音乐</p>
-        </div>
-        <div class="ui-form-item ui-form-item-checkbox ui-border-b">
-            <label class="ui-checkbox">
-                <input type="checkbox" checked="" name="aihao" id="sing">
-            </label>
-            <p>唱歌</p>
-        </div>
+        <div id="installedContainer2">
 
-        <div class="ui-form-item ui-form-item-checkbox ui-border-b">
-            <label class="ui-checkbox">
-                <input type="checkbox" checked="" name="aihao" id="dance">
-            </label>
-            <p>跳舞</p>
-        </div>
-
-        <div class="ui-form-item ui-border-b">
-            <label>性别</label>
-            <div class="ui-select">
-                <select name="sex">
-                    <option value="男同学">男同学</option>
-                    <option value="女同学">女同学</option>
-                </select>
-            </div>
-        </div>
-
-
-        <div class="ui-tooltips">
-            <div class="ui-tooltips-cnt ui-border-b demo-desc">
-                开关
-            </div>
-        </div>
-
-        <div class="ui-form-item ui-form-item-switch ui-border-b">
-            <p>
-                开关文字
-            </p>
-            <label class="ui-switch">
-                <input type="checkbox" checked="">
-            </label>
-        </div>
-
-        <div class="ui-form-item ui-form-item-textarea  ui-border-b demo-desc" style="height: 50px">
-            <label for="mark">备注</label><textarea placeholder=""
-                                                  style="height: 80%"
-                                                  id="mark" name="mark"></textarea>
         </div>
 
         <div class="" style="padding: 5px">
-            <a class="ui-btn-lg " onclick="javascript:save()">
-                保存参数
-            </a>
-        </div>
-        <div class="" style="padding: 5px">
-
             <a class="ui-btn-lg ui-btn-primary" onclick="javascript:window.ec.start()">
                 启动脚本
             </a>
         </div>
     </form>
 </div>
-<script src="/htmljs/jquery.min.js"></script>
+
+
+<div class="ui-dialog ui-dialog-operate" id="myModal_zc">
+    <div class="ui-dialog-cnt">
+        <div class="ui-dialog-bd">
+            <h1>抓宠</h1>
+            <form>
+                <div class="ui-form-item fontSize2">
+                    <label>
+                        时长1
+                    </label>
+                    <input type="text"  id="zc_time1" maxlength="3"   placeholder="请输入时长1"/>
+                </div>
+                <div class="ui-form-item fontSize2">
+                    <label>
+                        时长2
+                    </label>
+                    <input type="text"  id="zc_time2" maxlength="2"  placeholder="请输入时长2"/>
+                </div>
+            </form>
+        </div>
+        <div class="ui-dialog-ft">
+            <button class="ui-btn-lg" id="zc_save">确定</button>
+        </div>
+        <i class="ui-dialog-close" data-role="button" id="zc_close"></i>
+    </div>
+</div>
+
+
+
+<div class="ui-dialog ui-dialog-operate" id="myModal_gj">
+    <div class="ui-dialog-cnt">
+        <div class="ui-dialog-bd">
+            <h1>挂机</h1>
+            <form>
+                <div class="ui-form-item fontSize2">
+                    <label>
+                        时长1
+                    </label>
+                    <input type="text"  id="gj_time1" maxlength="3"   placeholder="请输入时长1"/>
+                </div>
+                <div class="ui-form-item fontSize2">
+                    <label>
+                        时长2
+                    </label>
+                    <input type="text"  id="gj_time2" maxlength="2"  placeholder="请输入时长2"/>
+                </div>
+            </form>
+        </div>
+        <div class="ui-dialog-ft">
+            <button class="ui-btn-lg" id="gj_save">确定</button>
+        </div>
+        <i class="ui-dialog-close" data-role="button" id="gj_close"></i>
+    </div>
+</div>
+
+<script src="htmljs/jquery.min.js"></script>
 </body>
 
 <script>
@@ -159,84 +177,111 @@
     $(function () {
         //使用jquery进行设置值
         //取得参数并且进行设置
-        var name = window.ec.getConfig("name");
-        $("#name").val(name);
+
+        //一键升级55级
+        var level = JSON.parse(window.ec.getConfig("level"))
+        $("#level").attr("checked", level.check)
+        //挂机
+        var gj = JSON.parse(window.ec.getConfig("gj"))
+        $("#gj").attr("checked", gj.check)
+        $(".gj_time").html("时长: "+gj.time+"/"+gj.time2);
 
 
-        var cardNo = window.ec.getConfig("cardNo");
-        $("#cardNo").val(cardNo);
+        //抓宠
+        var zc = JSON.parse(window.ec.getConfig("zc"))
+        $("#zc").attr("checked", zc.check)
+        $(".zc_time").html("时长: "+zc.time+"/"+zc.time2);
 
 
-        var mark = window.ec.getConfig("mark");
-        $("#mark").val(mark);
-
-        var age = window.ec.getConfig("age");
-        $("#age").val(age);
-        var one = window.ec.getConfig("one");
-        if (one === "true") {
-            $("#one").attr("checked", "checked");
-        }
-        var two = window.ec.getConfig("two");
-        if (two === "true") {
-            $("#two").attr("checked", "checked");
-        }
-        var three = window.ec.getConfig("three");
-        if (three === "true") {
-            $("#three").attr("checked", "checked");
-        }
-
-        var music = window.ec.getConfig("music");
-        if (music === "true") {
-            $("#music").attr("checked", "checked");
+        //精灵王试炼
+        var jlw = JSON.parse(window.ec.getConfig("jlw"))
+        $("#jlw").attr("checked", jlw.check)
+        $(".jlw_team").html(jlw.type );
+        $(".jlw_floor").html(jlw.floor+"层");
+        if(jlw.status == true){
+            $(".jlw_status").html("已完成").css("color", "#228B22");
+        }else if(jlw.status == false){
+            $(".jlw_status").html("未完成").css("color", "red");
         }
 
-
-        var sing = window.ec.getConfig("sing");
-        if (sing === "true") {
-            $("#sing").attr("checked", "checked");
+        //百人道场
+        var brdc = JSON.parse(window.ec.getConfig("brdc"))
+        $("#brdc").attr("checked", brdc.check)
+        $(".brdc_team").html(brdc.type);
+        $(".brdc_floor").html(brdc.floor);
+        if(brdc.status == true){
+            $(".brdc_status").html("已完成").css("color", "#228B22");
+        }else if(jlw.status == false){
+            $(".brdc_status").html("未完成").css("color", "red");
         }
 
-        var dance = window.ec.getConfig("dance");
-        if (dance === "true") {
-            $("#dance").attr("checked", "checked");
-        }
+        $(".appCheck").on("change", function(){
+            var id = this.id;
+            window.ec.logd(id)
+            var obj = JSON.parse(window.ec.getConfig(id));
+            obj.check = this.checked;
+            window.ec.saveConfig(id, JSON.stringify(obj))
+        });
 
-        var sex = window.ec.getConfig("sex");
-        $("select[name=sex]").find("option[value='" + sex + "']").attr("selected", true);
+
+
+        $(".gj_set").on("click", function(){
+            var gj = JSON.parse(window.ec.getConfig("gj"));
+            $("#gj_time1").val(gj.time);
+            $("#gj_time2").val(gj.time2);
+            $("#myModal_gj").addClass("show")
+
+
+        })
+        $("#gj_close").on("click", function(){
+            $("#myModal_gj").removeClass("show")
+        })
+        $("#gj_save").on("click", function(){
+            var gj = JSON.parse(window.ec.getConfig("gj"));
+            gj.time = $("#gj_time1").val();
+            gj.time2 = $("#gj_time2").val();
+            $(".gj_time").html("时长: "+gj.time+"/"+gj.time2)
+            window.ec.saveConfig("gj", JSON.stringify(gj))
+            $("#myModal_gj").removeClass("show")
+        })
+
+
+        $(".zc_set").on("click", function(){
+            var zc = JSON.parse(window.ec.getConfig("zc"));
+            $("#zc_time1").val(zc.time);
+            $("#zc_time2").val(zc.time2);
+            $("#myModal_zc").addClass("show")
+
+
+        })
+        $("#zc_close").on("click", function(){
+            $("#myModal_zc").removeClass("show")
+        })
+        $("#zc_save").on("click", function(){
+            var zc = JSON.parse(window.ec.getConfig("zc"));
+            zc.time = $("#zc_time1").val();
+            zc.time2 = $("#zc_time2").val();
+            $(".zc_time").html("时长: "+zc.time+"/"+zc.time2)
+            window.ec.saveConfig("zc", JSON.stringify(zc))
+            $("#myModal_zc").removeClass("show")
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
     });
 
 
-    //保存参数的函数
-    function save() {
-        var name = $("#name").val();
-        window.ec.saveConfig("name", name);
 
-
-        var cardNo = $("#cardNo").val();
-        window.ec.saveConfig("cardNo", cardNo);
-
-
-        var age = $("#age").val();
-        window.ec.saveConfig("age", age);
-        //一年级
-        window.ec.saveConfig("one", $("#one").prop("checked"));
-        window.ec.saveConfig("two", $("#two").prop("checked"));
-        window.ec.saveConfig("three", $("#three").prop("checked"));
-
-        window.ec.saveConfig("music", $("#music").prop("checked"));
-        window.ec.saveConfig("sing", $("#sing").prop("checked"));
-        window.ec.saveConfig("dance", $("#dance").prop("checked"));
-
-        window.ec.saveConfig("mark", $("#mark").val());
-
-
-        var sex = $("select[name=sex]").find("option:selected").val();
-        window.ec.saveConfig("sex", sex);
-
-        window.ec.toast("保存成功");
-
-
-    }
 
 </script>
 </html>
