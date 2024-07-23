@@ -68,8 +68,7 @@ function main() {
 //    })
 
 
-
-
+    mainTask()
 
 
 //
@@ -93,7 +92,7 @@ function main() {
 //
 
 //task1();
-ocrTask();
+
 
 //activity.抓宠();
 //thread.cancelThread(tid);

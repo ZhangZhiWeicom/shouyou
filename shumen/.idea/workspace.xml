@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c3571c0e-3be6-4fa9-9a19-7ea41249d098" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../colorimage/20240721013737.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../colorimage/20240721020000.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../colorimage/20240721020503.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../colorimage/20240721021058.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../colorimage/20240721030135.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../colorimage/20240721030307.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../colorimage/20240721030905.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../colorimage/20240721031857.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../colorimage/20240721031940.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../colorimage/20240721032017.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../newStone/build/jar/main.clz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../newStone/build/jar/main.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../newStone/build/uijar/main.clz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../newStone/build/uijar/ui.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../newStone/lib.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../newStone/obfuscator.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../newStone/src/res/下一题.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../newStone/src/res/主线任务.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../newStone/src/res/对话.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../colorimage/colorImageHistory.json" beforeDir="false" afterPath="$PROJECT_DIR$/../colorimage/colorImageHistory.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../newStone/src/js/activity.js" beforeDir="false" afterPath="$PROJECT_DIR$/../newStone/src/js/activity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../newStone/src/js/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/../newStone/src/js/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../newStone/src/js/func.js" beforeDir="false" afterPath="$PROJECT_DIR$/../newStone/src/js/func.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../newStone/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../newStone/src/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../newStone/src/js/mainTask.js" beforeDir="false" afterPath="$PROJECT_DIR$/../newStone/src/js/mainTask.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../newStone/src/js/mainTask1.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2jWXLf2wEYi4XFniiMwDpfT4vDp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c3571c0e-3be6-4fa9-9a19-7ea41249d098" name="Default Changelist" comment="" />
+      <created>1721503752483</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1721503752483</updated>
+      <workItem from="1721503756192" duration="54000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1721503808051">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1721503808051" />
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1721503756527">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1721503756527" />
+  </component>
+</project>

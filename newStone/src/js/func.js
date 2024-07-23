@@ -1,13 +1,13 @@
 //自定义包装的工具方法
 var func = function(){};
 
-func.ocr = function(times){
+func.ocr = function(x1, y1, x2, y2, times){
     if(!times) times = 1;
     let res = null;
     //Tesseract模块初始化参数
     let tessInitMap = {
         "type": "tess",
-        "language": "chi_sim+eng+num",
+        "language": "chi_sim+eng",
         "debug": false
     }
     let tsOcr = ocr.newOcr();
@@ -17,30 +17,29 @@ func.ocr = function(times){
         return res;
     }else{
         for(var i = 0; i < times; i++){
-            logd("i="+i)
             //读取一个bitmap
-            let  bitmap = image.captureScreenBitmap("png",1535,262,1902,307, 99)
+            let  bitmap = image.captureScreenBitmap("png",x1, y1, x2, y2, 99)
             if (!bitmap) {
                 loge("读取图片失败");
                 return res;
             }
             // 对图片进行识别
-            let result = tsOcr.ocrBitmap(bitmap, 20 * 1000, {});
-//            logd("ocr结果-result》 " + JSON.stringify(result));
+            let result = tsOcr.ocrBitmap(bitmap, 5 * 1000, {});
+           // logd("ocr结果-result》 " + JSON.stringify(result));
             bitmap.recycle();
             if (!result) {
                 logw("未识别到结果");
                 return res;
-            }else if(result.length  >= 1 && result[0].label.indexOf("主 线") > -1){
-                i = times + 1;
-                res = result;
-//                logd("文字 : " + value.label + " x: " + value.x + " y: " + value.y + " width: " + value.width + " height: " + value.height);
+            }else if(result.length  >= 1){
+                i = 100000;
+                res = result[0];
+                value = result
+                // logd("文字 : " + value.label + " x: " + value.x + " y: " + value.y + " width: " + value.width + " height: " + value.height);
             }
 
         }
     }
     tsOcr.releaseAll();
-    logd("ocr结果-》 " + JSON.stringify(res));
     return res;
 
 }
@@ -53,7 +52,7 @@ func.ocr = function(times){
 * x2 结束x2点
 * y2 结束y2点
 */
-func.findImageEx = function(image1, x1, y1, x2, y2, times, failFunc, successFunc){
+func.findImageEx = function(image1, x1, y1, x2, y2, times, successFunc, failFunc){
     if(!times) times = 1;
     var result = null;
 
@@ -61,8 +60,7 @@ func.findImageEx = function(image1, x1, y1, x2, y2, times, failFunc, successFunc
     let sms=readResAutoImage(image1);
     for (var i = 0; i < times; i++) {
 //        滑块移动(1);
-        if(failFunc && typeof failFunc == "function")failFunc(i);
-        let  points = image.findImageEx(sms,x1,y1,x2,y2,0.7, 0.8, 1, 5);
+        let  points = image.findImageEx(sms,x1,y1,x2,y2,0.7, 0.9, 1, 5);
 //        logd("points " + JSON.stringify(points));
         //这玩意是个数组
         if(points && points.length> 0){
@@ -71,6 +69,8 @@ func.findImageEx = function(image1, x1, y1, x2, y2, times, failFunc, successFunc
             result = {"x":x, "y":y};
             if(successFunc && typeof successFunc == "function")successFunc(result);
             i = times + 1;
+        }else{
+            if(failFunc && typeof failFunc == "function")failFunc(i);
         }
 
     }
@@ -95,7 +95,7 @@ func.findImageEx = function(image1, x1, y1, x2, y2, times, failFunc, successFunc
 * x2 结束x2点
 * y2 结束y2点
 */
-func.matchTemplateEx = function(image1, x1, y1, x2, y2, times, failFunc, successFunc){
+func.matchTemplateEx = function(image1, x1, y1, x2, y2, times, successFunc, failFunc){
     if(!times) times = 1;
     var result = null;
     //从工程目录下res文件夹下读取sms.png文件
@@ -106,7 +106,7 @@ func.matchTemplateEx = function(image1, x1, y1, x2, y2, times, failFunc, success
     rectp.right=x2;
     rectp.bottom=y2;
     for (var i = 0; i < times; i++) {
-        if(failFunc && typeof failFunc == "function")failFunc(i);
+
         let points = image.matchTemplateEx( sms,0.7,0.8,rectp,-1,1,5);
         logd("points " + JSON.stringify(points));
         //这玩意是个数组
@@ -116,6 +116,8 @@ func.matchTemplateEx = function(image1, x1, y1, x2, y2, times, failFunc, success
             result = {"x":points[0].point.x, "y":points[0].point.y};
             if(successFunc && typeof successFunc == "function")successFunc(result);
             i = times + 1;
+        }else{
+            if(failFunc && typeof failFunc == "function")failFunc(i);
         }
     }
     //图片要回收
@@ -124,30 +126,44 @@ func.matchTemplateEx = function(image1, x1, y1, x2, y2, times, failFunc, success
 }
 
 /**
-*透明找图
-*image1 小图
-* x1 起始x1点
-* y1 起始y1点
-* x2 结束x2点
-* y2 结束y2点
+*
+*image1
+* x1
+* y1
+* x2
+* y2
 */
-func.findImageByColor = function(image1, x1, y1, x2, y2, times, failFunc, successFunc){
+/**
+ * 透明找图
+ * @param image1 小图
+ * @param x1 起始x1点
+ * @param y1 起始y1点
+ * @param x2 结束x2点
+ * @param y2 结束y2点
+ * @param times 查找次数
+ * @param successFunc 查找成功，调用方法
+ * @param failFunc 查找失败，调用方法
+ * @returns {null}
+ */
+func.findImageByColor = function(image1, x1, y1, x2, y2, times, successFunc, failFunc){
     if(!times) times = 1;
     var result = null;
     //从工程目录下res文件夹下读取sms.png文件
     let sms=readResAutoImage(image1);
     for (var i = 0; i < times; i++) {
-        if(failFunc && typeof failFunc == "function")failFunc(i);
+
         let aimage = image.captureFullScreen();
         if(aimage != null){
-            let  points = image.findImageByColor(aimage,sms,x1,y1,x2,y2,0.8, 1);
-//            logd("points " + JSON.stringify(points));
+            let  points = image.findImageByColor(aimage,sms,x1, y1, x2, y2,0.7, 1);
+           // logd("points " + JSON.stringify(points));
             //这玩意是个数组
             if(points && points.length> 0){
 //                logd(JSON.stringify(points))
                 result = {"x":points[0].x, "y":points[0].y};
                 if(successFunc && typeof successFunc == "function")successFunc(result);
                 i = times + 1;
+            }else{
+                if(failFunc && typeof failFunc == "function")failFunc(i);
             }
         }
         image.recycle(aimage)
@@ -164,7 +180,7 @@ func.findImageByColor = function(image1, x1, y1, x2, y2, times, failFunc, succes
 //* x2 结束x2点
 //* y2 结束y2点
 //*/
-//func.imageExists(image1, x1, y1, x2, y2, times, successFunc, failFunc){
+//func.imageExists(image1, x1, y1, x2, y2, times, failFunc, successFunc){
 //
 //    func.findImageEx("3.png", 362,772,514,864, 100, function(){
 //        滑块移动(1);
@@ -176,5 +192,14 @@ func.findImageByColor = function(image1, x1, y1, x2, y2, times, failFunc, succes
 //    });
 //
 //}
+/**
+ * 随机延时
+ * @param min 最短时间
+ * @param max 最长时间
+ */
+function sleepRandom(min, max) {
+    var x = random(min, max);
+    sleep(x);
+}
 
 
