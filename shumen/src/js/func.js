@@ -28,7 +28,7 @@ func.ocr = function(x1, y1, x2, y2, times){
 //            logd("ocr结果-result》 " + JSON.stringify(result));
             bitmap.recycle();
             if (!result) {
-                logw("未识别到结果");
+                // logw("未识别到结果");
                 return res;
             }else if(result.length  >= 1){
                 i = 100000;
@@ -172,7 +172,7 @@ func.findImageByColor = function(image1, x1, y1, x2, y2, times, successFunc, fai
         if(failFunc && typeof failFunc == "function")failFunc(i);
         let aimage = image.captureFullScreen();
         if(aimage != null){
-            let  points = image.findImageByColor(aimage,sms,x1,y1,x2,y2,0.8, 1);
+            let  points = image.findImageByColor(aimage,sms,x1,y1,x2,y2,0.7, 1);
 //            logd("points " + JSON.stringify(points));
             //这玩意是个数组
             if(points && points.length> 0){

@@ -46,16 +46,8 @@ function main() {
     //申请完权限至少等1s(垃圾设备多加点)再截图,否则会截不到图
     sleep(1000)
 //task1();
-
-
-
-
-    //
     // login();
-    mainTask();
-    // // findRoad()//
-
-
+    // mainTask();
 }
 
 
@@ -67,30 +59,51 @@ function mainTask(){
             sleep(1000);
             findRoad()
         }, function(idx){
-            logd("主线任务");
+            // logd("主线任务");
             
         })
 
-        //点击任意区域继续
-        func.findImageByColor("自动.png", 1114,274,1216,376, 1, function(result){
-            logd("自动111111111111111");
-            for(var i = 0; i< 100; i++){
-                sleep(500);
-                func.findImageByColor("手动.png", 1114,274,1216,376, 1, function(result){
+        //自动战斗模式
+        var res = func.ocr(1148,310,1188,334, 1)
+        if(res != null && res.label === "自动"){
+            for(var i = 0; i< 50; i++){
+                var res = func.ocr(1148,310,1188,334, 1)
+                if(res != null && res.label !== "自动"){
                     i = 1000;
-                }, function(idx){
-
-                })
+                }
+                sleep(300);
             }
-        }, function(idx){
-            logd("自动");
-        })
+        }
 
-        func.findImageByColor("对话.png", 0,634,1242,714, 1, function(result){
-            clickPoint(984 + random(-50, 50),656+ random(-10, 10))
+        // func.findImageByColor("自动.png", 1114,274,1216,376, 1, function(result){
+        //     logd("自动111111111111111");
+        //     for(var i = 0; i< 50; i++){
+        //         var res = func.ocr(1148,310,1188,334, 1)
+        //         if(res != null && res.label === "手动"){
+        //             i = 1000;
+        //         }
+        //         sleep(300);
+        //     }
+        // }, function(idx){
+        //     // logd("自动");
+        // })
+
+
+
+
+
+        func.findImageByColor("对话.png", 1154,660,1218,712, 1, function(result){
+            clickPoint(164 + random(-50, 50),652+ random(-10, 10))
             sleep(random(180, 350));
         }, function(idx){
-            logd("对话");
+            // logd("对话");
+        })
+
+        func.findImageByColor("对话.png", 52,656,124,714, 1, function(result){
+            clickPoint(164 + random(-50, 50),652+ random(-10, 10))
+            sleep(random(180, 350));
+        }, function(idx){
+            // logd("对话");
         })
 
         //点击任意区域继续
@@ -98,7 +111,7 @@ function mainTask(){
             clickPoint(984 + random(-50, 50),656+ random(-10, 10))
             sleep(random(200, 400));
         }, function(idx){
-            logd("下箭头");
+            // logd("下箭头");
         })
 
         //点击任意区域继续
@@ -107,7 +120,7 @@ function mainTask(){
             sleep(20*1000);
             sleep(2000);
         }, function(idx){
-            logd("修炼");
+            // logd("修炼");
         })
 
         func.findImageEx("使用.png", 806,532,944,598, 1, function(result){
@@ -116,7 +129,7 @@ function mainTask(){
             sleep(2*1000);
 
         }, function(idx){
-            logd("使用");
+            // logd("使用");
         })
 
         func.findImageEx("装备.png", 798,546,946,594, 1, function(result){
@@ -125,15 +138,10 @@ function mainTask(){
             sleep(2*1000);
 
         }, function(idx){
-            logd("装备");
+            // logd("装备");
         })
 
-        func.findImageEx("手掌.png", 208,364,392,502, 1, function(result){
-            clickPoint(result.x  + random(-20, 20),result.y + random(-5, 5))
-            sleep(10*1000);
-        }, function(idx){
-            logd("手掌");
-        })
+
 
 
 
@@ -164,7 +172,7 @@ function mainTask(){
                 logd("仙灵升级");
             })
         }, function(idx){
-            logd("仙灵升级");
+            // logd("仙灵升级");
         })
 
 
@@ -172,7 +180,7 @@ function mainTask(){
             clickPoint(result.x ,result.y)
             sleep(800);
         }, function(idx){
-            logd("关闭弹窗");
+            // logd("关闭弹窗");
         })
 
         func.findImageEx("去融合.png", 668,470,826,516, 1, function(result){
@@ -182,24 +190,24 @@ function mainTask(){
             clickPoint(444 + random(-15, 15),652+ random(-5, 5))
             sleep(2000);
         }, function(idx){
-            logd("去融合");
+            // logd("去融合");
         })
 
         func.findImageEx("免费领取.png", 402,454,626,544, 1, function(result){
             clickPoint(result.x + random(-15, 15),result.y+ random(-5, 5))
             sleep(1000);
         }, function(idx){
-            logd("去融合");
+            // logd("去融合");
         })
 
         func.findImageEx("关闭弹窗1.png", 794,16,1266,240, 1, function(result){
             clickPoint(result.x  + random(-5, 5),result.y + random(-5, 5))
             sleep(800);
         }, function(idx){
-            logd("关闭弹窗");
+            // logd("关闭弹窗");
         })
 
-        sleep(100);
+        sleep(300);
 
 
     }while(true)
@@ -248,7 +256,8 @@ function findRoad(){
         sleep(200);
         let  secondStep = func.ocr(1160,21,1219,36, 1);
         logd("secondStep=", JSON.stringify(secondStep));
-        if(firstStep != null && secondStep != null && firstStep.label.length >= 6 && firstStep.label.length===secondStep.label.length){
+        logd("firstStep=", JSON.stringify(firstStep));
+        if(firstStep != null && secondStep != null && firstStep.label.length >= 6 && firstStep.label===secondStep.label){
             logd("跑路结束");
             i = 1000;
         }else if(firstStep === null && secondStep === null ){
@@ -259,19 +268,52 @@ function findRoad(){
         }
         firstStep = secondStep;
 
-        func.findImageByColor("对话.png", 0,634,1242,714, 1, function(result){
-            clickPoint(984 + random(-50, 50),656+ random(-10, 10))
+        func.findImageByColor("对话.png", 1154,660,1218,712, 1, function(result){
+            clickPoint(164 + random(-50, 50),652+ random(-10, 10))
+            sleep(random(180, 350));
+        }, function(idx){
+            // logd("对话");
+        })
+
+        func.findImageByColor("对话.png", 52,656,124,714, 1, function(result){
+            logd("对话");
+            clickPoint(164 + random(-50, 50),652+ random(-10, 10))
             sleep(random(180, 350));
             i = 1000;
         }, function(idx){
-            logd("对话");
+
         })
 
+        //点击任意区域继续
+        func.findImageByColor("下箭头.png", 1026,614,1206,694, 1, function(result){
+            clickPoint(984 + random(-50, 50),656+ random(-10, 10))
+            sleep(random(200, 400));
+        }, function(idx){
+            // logd("下箭头");
+        })
+
+
         func.findImageByColor("自动.png", 1114,274,1216,376, 1, function(result){
+            logd("自动");
+            sleep(1000);
             i = 1000;
         }, function(idx){
         })
-        sleep(100);
+
+
+        func.findImageEx("手掌.png", 208,364,392,502, 1, function(result){
+            clickPoint(result.x  + random(-20, 20),result.y + random(-5, 5))
+            sleep(10*1000);
+        }, function(idx){
+            // logd("手掌");
+        })
+
+        func.findImageEx("太极.png", 216,368,366,494, 1, function(result){
+            clickPoint(result.x  + random(-20, 20),result.y + random(-5, 5))
+            sleep(10*1000);
+        }, function(idx){
+            // logd("太极");
+        })
     }
 }
 
