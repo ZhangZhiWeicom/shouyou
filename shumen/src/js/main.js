@@ -48,6 +48,9 @@ function main() {
 //task1();
     // login();
     // mainTask();
+    activity.玄界之石();
+    // var res = func.ocr(1148,310,1188,334, 1)
+    // logd("RES========="+JSON.stringify(res));
 }
 
 

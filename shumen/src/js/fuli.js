@@ -94,37 +94,42 @@ fuli.xianshi = function(){
  * 开服活动
  */
 fuli.kaifu = function(){
-    func.findImageEx("小红点.png",284,130,330,326,1,function(result){
+
+    //仙缘试炼
+    func.findImageEx("小红点.png",284,130,330,176,1,function(result){
         clickPoint(result.x - 90 + random(-50, 50) , result.y + 22 + random(-10, 10));
         sleep(random(1500, 2500))
-        let y = result.y;
-        if( y > 132 && y < 176){//仙缘试炼
-            for(var i = 0; i < 4; i++){
-                func.findImageEx("领取3.png", 1126,232,1212,270, 2, function(res1){
-                    clickPoint(res1.x + random(-20, 20) , res1.y + random(-10, 10));
-                    sleep(random(2500, 3500));
-                }, function(){
-                    sleep(1000);
-                })
-            }
-        }else if( y > 196 && y < 240){//神兵利器
-            for(var i = 0; i < 4; i++){
-                func.findImageEx("领取.png", 1126,296,1250,645, 2, function(res1){
-                    clickPoint(res1.x + random(-20, 20) , res1.y + random(-10, 10));
-                    sleep(random(2500, 3500));
-                }, function(){
-                    sleep(1000);
-                })
-            }
-        }else if( y > 250 && y < 308){//经验成长
-            func.findImageEx("领取4.png", 360,304,434,333, 2, function(res1){
-                clickPoint(res1.x + random(-10, 10) , res1.y + random(-3, 3));
+        for(var i = 0; i < 4; i++){
+            func.findImageEx("领取3.png", 1126,232,1212,270, 2, function(res1){
+                clickPoint(res1.x + random(-20, 20) , res1.y + random(-10, 10));
                 sleep(random(2500, 3500));
             }, function(){
+                sleep(1000);
             })
         }
-    }, function(){
-        sleep(2000);
+    })
+    //神兵利器
+    func.findImageEx("小红点.png",284,196,330,240,2,function(result){
+        clickPoint(result.x - 90 + random(-50, 50) , result.y + 22 + random(-10, 10));
+        sleep(random(1500, 2500))
+        for(var i = 0; i < 4; i++){
+            func.findImageEx("领取.png", 1126,296,1250,645, 2, function(res1){
+                clickPoint(res1.x + random(-20, 20) , res1.y + random(-10, 10));
+                sleep(random(2500, 3500));
+            }, function(){
+                sleep(1000);
+            })
+        }
     })
 
+    //经验成长
+    func.findImageEx("小红点.png",284,250,330,308,2,function(result){
+        clickPoint(result.x - 90 + random(-50, 50) , result.y + 22 + random(-10, 10));
+        sleep(random(1500, 2500))
+        func.findImageEx("领取4.png", 360,304,434,333, 2, function(res1){
+            clickPoint(res1.x + random(-10, 10) , res1.y + random(-3, 3));
+            sleep(random(2500, 3500));
+        }, function(){
+        })
+    })
 }
